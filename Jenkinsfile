@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    docker_username = wolder
+    docker_username = "wolder"
   }
   stages {
     stage('Parallel execution') {
