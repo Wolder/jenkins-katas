@@ -25,6 +25,12 @@ pipeline {
                     options {
                         skipDefaultCheckout(true)
                     }
+
+                    when {
+                        beforeAgent true
+                        branch 'master'
+                    }
+
                     steps {
                         unstash 'code'
                         sh 'ci/build-app.sh'
