@@ -17,7 +17,6 @@ pipeline {
             docker {
               image 'gradle:jdk11'
             }
-
           }
           steps {
             sh 'ci/build-app.sh'
@@ -41,4 +40,5 @@ pipeline {
 	 sh 'ci/push-docker.sh'
       }
    }
+}
 }
